@@ -1,0 +1,21 @@
+cask_args appdir: '/Applications'
+
+tap 'homebrew/bundle'
+
+brew 'ack'
+brew 'git'
+brew 'coreutils'
+brew 'ruby-build'
+brew 'rbenv'
+brew 'jq'
+brew 'python3'
+brew 'wget'
+brew 'telnet'
+brew 'unrar'
+
+cask 'google-chrome'
+cask 'firefox'
+cask 'iterm2'
+cask 'visual-studio-code'
+cask 'vlc'
+cask 'transmission' 
