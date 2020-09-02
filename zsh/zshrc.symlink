@@ -76,6 +76,7 @@ plugins=(
 	zsh-syntax-highlighting
 	zsh-completions
     kubectl
+    oc
 )
 
 autoload -U compinit && compinit
