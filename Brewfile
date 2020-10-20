@@ -14,6 +14,7 @@ brew 'python'
 brew 'wget'
 brew 'telnet'
 brew 'unrar'
+brew 'autojump' 
 
 cask 'google-chrome'
 cask 'firefox'
