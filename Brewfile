@@ -15,6 +15,7 @@ brew 'wget'
 brew 'telnet'
 brew 'unrar'
 brew 'autojump' 
+brew 'kubectx'
 
 cask 'google-chrome'
 cask 'firefox'
