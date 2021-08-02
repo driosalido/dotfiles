@@ -15,7 +15,14 @@ brew 'wget'
 brew 'telnet'
 brew 'unrar'
 brew 'autojump' 
+<<<<<<< Updated upstream
 brew 'kubectx'
+=======
+brew 'terraform'
+brew 'kubectl'
+brew 'helm'
+brew 'warrensbox/tap/tfswitch'
+>>>>>>> Stashed changes
 
 cask 'google-chrome'
 cask 'firefox'
@@ -23,3 +30,4 @@ cask 'iterm2'
 cask 'visual-studio-code'
 cask 'vlc'
 cask 'transmission' 
+cask 'docker'
