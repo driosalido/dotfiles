@@ -2,7 +2,7 @@
 #
 # bootstrap installs things.
 echo $PWD
-source ./script/prompt
+source $HOME/.dotfiles/script/prompt
 
 cd "$(dirname "$0")/.."
 DOTFILES_ROOT=$(pwd -P)

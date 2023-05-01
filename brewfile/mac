@@ -19,7 +19,6 @@ brew 'kubectx'
 brew 'terraform'
 brew 'kubectl'
 brew 'helm'
-brew 'warrensbox/tap/tfswitch'
 
 cask 'google-chrome'
 cask 'firefox'
