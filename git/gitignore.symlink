@@ -5,5 +5,4 @@
 plan.out
 terraform.tfstate
 terraform.tfstate.backup
-scripts/teamcity/driosalido
 .python-version

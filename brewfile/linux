@@ -1,0 +1,12 @@
+tap "homebrew/bundle"
+tap "knative-sandbox/kn-plugins"
+
+brew "awscli"
+brew "clusterawsadm"
+brew "clusterctl"
+brew "istioctl"
+brew "kind"
+brew "kubernetes-cli"
+brew "kubectx"
+brew "zsh-completions"
+brew "knative-sandbox/kn-plugins/func"

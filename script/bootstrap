@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 #
 # bootstrap installs things.
+echo $PWD
 source ./script/prompt
 
 cd "$(dirname "$0")/.."
@@ -120,17 +121,16 @@ install_dotfiles () {
   done
 }
 
-setup_gitconfig
-install_dotfiles
-
-# If we're on a Mac, let's install and setup homebrew.
-if [ "$(uname -s)" == "Darwin" ]
-then
-  info "installing dependencies"
+install_components () {
+  info "installing Components"
   if source bin/dot | while read -r data; do info "$data"; done
   then
-    success "dependencies installed"
+    success "components installed"
   else
-    fail "error installing dependencies"
+    fail "error installing components"
   fi
-fi
+}
+
+setup_gitconfig
+install_dotfiles
+install_components

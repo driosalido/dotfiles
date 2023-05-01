@@ -112,7 +112,7 @@ source $ZSH/oh-my-zsh.sh
 
 #Load .dotfiles .zsh files in order (path.zsh, other.zsh, completion.zsh)
 typeset -U config_files
-config_files=($HOME/.dotfiles/**/*.zsh)
+#config_files=($HOME/.dotfiles/**/*.zsh)
 
 # load the path files
 for file in ${(M)config_files:#*/path.zsh}
