@@ -34,6 +34,7 @@
         #
         # Setting to git 2.0 default to suppress warning message
         default = simple
+     	autoSetupRemote = true
 [filter "lfs"]
 	clean = git-lfs clean -- %f
 	smudge = git-lfs smudge -- %f
@@ -43,3 +44,5 @@
 	helper = osxkeychain
 [pull]
 	rebase = false
+[commit]
+	template = /Users/driosalido/git/hello/local-env/git/msg-template

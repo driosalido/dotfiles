@@ -145,3 +145,16 @@ test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell
 
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+#THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
+export SDKMAN_DIR="$HOME/.sdkman"
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+export PATH="/usr/local/opt/python@3.9/bin:$PATH"
+export JEP_PATH="/usr/local/lib/python3.9/site-packages/jep/"
+export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+#export PATH="/Users/driosalido/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)
+export HOMEBREW_GITHUB_API_TOKEN=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
+export PATH="/Users/driosalido/git/config-validations:$PATH"
