@@ -3,6 +3,7 @@
 *.swp
 .vscode
 plan.out
-.terraform*
 terraform.tfstate
 terraform.tfstate.backup
+scripts/teamcity/driosalido
+.python-version

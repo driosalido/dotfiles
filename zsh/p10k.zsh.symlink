@@ -76,13 +76,14 @@
       # vpn_ip                # virtual private network indicator
       # ram                   # free RAM
       # load                  # CPU load
+      my_ihq_aws
       time                    # current time
       # =========================[ Line #2 ]=========================
       newline
       # public_ip             # public IP address
       # proxy                 # system-wide http/https/ftp proxy
       # battery               # internal battery
-      # example               # example user-defined segment (see prompt_example function below)
+      #example               # example user-defined segment (see prompt_example function below)
   )
 
   # To disable default icons for all segments, set POWERLEVEL9K_VISUAL_IDENTIFIER_EXPANSION=''.
@@ -946,6 +947,15 @@
   # can slow down prompt by 1-2 milliseconds, so it's better to keep it turned off unless you
   # really need it.
   typeset -g POWERLEVEL9K_DISABLE_HOT_RELOAD=true
+
+
+  function prompt_my_ihq_aws() {
+      aws_account=$(cat ~/.aws/active_profile | cut -d "/" -f 1)
+      aws_account_name=$(cat ~/git/infrastructure/clients/global.tf | grep ${aws_account} | grep -v "variable" |tr -d " " | cut -d "=" -f 1)
+      cluster_name=$(cat ~/git/infrastructure/envs.sh | grep CLUSTER_NAME | grep -v "^#" | cut -d "=" -f 2 )
+      #p10k segment -b 1 -f 7 -i '' -t "${aws_account_name}:${aws_account}:${cluster_name}"
+      p10k segment -b yellow -f black -i '' -t "${cluster_name}@${aws_account_name}"
+  }
 
   # If p10k is already loaded, reload configuration.
   # This works even with POWERLEVEL9K_DISABLE_HOT_RELOAD=true.
