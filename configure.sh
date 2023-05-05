@@ -100,6 +100,11 @@ ohmyzshPluginInstall () {
     else
         git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting && success 'zsh-syntax-highlighting installed'
     fi
+    if [ -d "$HOME/.oh-my-zsh/custom/plugins/fzf-zsh-plugin" ]; then
+        info 'fzf-zsh-plugin already installed'
+    else
+        git clone https://github.com/unixorn/fzf-zsh-plugin.git ~/.oh-my-zsh/custom/plugins/fzf-zsh-plugins && success 'fzf-zsh-plugin installed'
+    fi
 }
 
 pl10kInstall () {

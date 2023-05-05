@@ -85,6 +85,8 @@ plugins=(
   z
   kubectl
   zsh-autosuggestions
+  fzf
+  #fzf-zsh-plugin
   zsh-syntax-highlighting
 )
 
