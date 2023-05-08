@@ -1,3 +1,5 @@
+# Fig pre block. Keep at the top of this file.
+[[ -f "$HOME/.fig/shell/zshrc.pre.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.pre.zsh"
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -152,3 +154,6 @@ export SDKMAN_DIR="$HOME/.sdkman"
 export PATH="/usr/local/opt/python@3.9/bin:$PATH"
 export JEP_PATH="/usr/local/lib/python3.9/site-packages/jep/"
 export PATH="/usr/local/opt/ruby/bin:$PATH"
+
+# Fig post block. Keep at the bottom of this file.
+[[ -f "$HOME/.fig/shell/zshrc.post.zsh" ]] && builtin source "$HOME/.fig/shell/zshrc.post.zsh"
