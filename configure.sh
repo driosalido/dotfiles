@@ -49,17 +49,6 @@ zshInstall () {
     fi
 }
 
-zshZInstall () {
-    # Install z for dir searching
-    if [ -d "$HOME/.oh-my-zsh/custom/plugins/zsh-z" ]; then
-        info "zsh-z already exists..."
-    else
-        git clone https://github.com/agkozak/zsh-z ~/.oh-my-zsh/custom/plugins/zsh-z
-        success 'zsh-z installed'
-    fi
-}
-
-
 ohmyzshInstall () {
     # oh-my-zsh install
     if [ -d ~/.oh-my-zsh/ ] ; then
@@ -105,6 +94,12 @@ ohmyzshPluginInstall () {
     else
         git clone https://github.com/unixorn/fzf-zsh-plugin.git ~/.oh-my-zsh/custom/plugins/fzf-zsh-plugins && success 'fzf-zsh-plugin installed'
     fi
+    if [ -d "$HOME/.oh-my-zsh/custom/plugins/zsh-z" ]; then
+        info "zsh-z already exists..."
+    else
+        git clone https://github.com/agkozak/zsh-z ~/.oh-my-zsh/custom/plugins/zsh-z
+        success 'zsh-z installed'
+    fi    
 }
 
 pl10kInstall () {
@@ -139,7 +134,6 @@ configureGitCompletion
 
 # oh my zsh setup
 ohmyzshInstall
-zshZInstall
 ohmyzshPluginInstall
 pl10kInstall
 

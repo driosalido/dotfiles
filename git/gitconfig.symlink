@@ -43,3 +43,5 @@
 [pull]
 	rebase = false
 
+[commit]
+	template = /Users/driosalido/git/hello/local-env/git/msg-template
