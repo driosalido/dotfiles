@@ -40,8 +40,12 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[credential]
+    helper = osxkeychain
 [pull]
 	rebase = false
 
 [commit]
 	template = /Users/driosalido/git/hello/local-env/git/msg-template
+[remote "origin"]
+	prune = true
